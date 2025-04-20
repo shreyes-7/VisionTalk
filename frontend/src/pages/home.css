@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1e1e2f, #12121e);
+    color: #ffffff;
+}
+
+/* Home Container */
+.homePageContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.homeNavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navLogo h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.navLogo span {
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logoutBtn {
+    color: #fff;
+    border-color: #2196f3;
+    transition: 0.3s ease;
+}
+
+.logoutBtn:hover {
+    background-color: #2196f3;
+}
+
+/* Main Content */
+.homeMain {
+    flex: 1;
+    display: flex;
+    padding: 4rem 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* Left Panel */
+.leftPanel {
+    max-width: 600px;
+}
+
+.leftPanel h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #2196f3, #6a1b9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.leftPanel span {
+    font-weight: bold;
+}
+
+.leftPanel p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.meetingInput {
+    
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.meetingTextField .MuiInputBase-root {
+    background-color: #6a6666;
+    border-radius: 8px;
+    color: white;
+}
+
+.joinBtn {
+    padding: 0.7rem 2rem;
+    background: linear-gradient(135deg, #2196f3, #6a1b9a);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.joinBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(33, 150, 243, 0.4);
+}
+
+/* Right Panel */
+.rightPanel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoImage {
+    width: 100%;
+    max-width: 400px;
+    filter: drop-shadow(0 0 15px rgba(33, 150, 243, 0.4));
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .homeMain {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .meetingInput {
+        justify-content: center;
+    }
+}
