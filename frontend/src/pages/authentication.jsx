@@ -6,6 +6,7 @@ import {
 } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { AuthContext } from '../contexts/AuthContext';
+import Navbar from '../Components/Navbar';
 
 const darkTheme = createTheme({
     palette: {
@@ -60,6 +61,8 @@ export default function Authentication() {
     };
 
     return (
+        <div>
+        <Navbar/>
         <ThemeProvider theme={darkTheme}>
             <Grid container component="main" sx={{ height: '100vh' }}>
                 <CssBaseline />
@@ -209,5 +212,6 @@ export default function Authentication() {
                 />
             </Grid>
         </ThemeProvider>
+        </div>
     );
 }

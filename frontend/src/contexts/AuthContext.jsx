@@ -40,23 +40,28 @@ export const AuthProvider = ({ children }) => {
     }
 
     const handleLogin = async (username, password) => {
-        try {
-            let request = await client.post("/login", {
-                username: username,
-                password: password
-            });
+  try {
+    let request = await client.post("/login", {
+      username: username,
+      password: password,
+    });
 
-            console.log(username, password)
-            console.log(request.data)
+    if (request.status === httpStatus.OK) {
+      localStorage.setItem("token", request.data.token);
 
-            if (request.status === httpStatus.OK) {
-                localStorage.setItem("token", request.data.token);
-                router("/home")
-            }
-        } catch (err) {
-            throw err;
-        }
+      // ✅ Set the userData here to trigger re-render
+      setUserData({
+        name: request.data.name,
+        username: request.data.username,
+        token: request.data.token,
+      });
+
+      router("/homepage");
     }
+  } catch (err) {
+    throw err;
+  }
+};
 
     const getHistoryOfUser = async () => {
         try {

@@ -22,9 +22,10 @@ function App() {
 
             <Route path='/auth' element={<Authentication />} />
 
-            <Route path='/home's element={<HomeComponent />} />
+            <Route path='/homepage' element={<HomeComponent />} />
             <Route path='/history' element={<History />} />
             <Route path='/:url' element={<VideoMeetComponent />} />
+            <Route path='/home' element={<LandingPage />} />
           </Routes>
         </AuthProvider>
 

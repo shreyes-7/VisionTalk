@@ -1,21 +1,21 @@
 import React from 'react';
 import "../App.css";
-import { Link, useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import HomeIcon from '@mui/icons-material/Home';
+// import HistoryIcon from '@mui/icons-material/History';
+// import VideoCallIcon from '@mui/icons-material/VideoCall';
+// import GroupAddIcon from '@mui/icons-material/GroupAdd';
+// import PersonIcon from '@mui/icons-material/Person';
+import Navbar from '../Components/Navbar';
 export default function LandingPage() {
-    const router = useNavigate();
+    
 
     return (
         <div className='landingPageContainer'>
-            <nav className='navBar'>
-                <div className='navHeader'>
-                    <h2>Vision <span>Talk</span></h2>
-                </div>
-                <div className='navlist'>
-                    
-                    <button onClick={() => router("/auth")} className='loginBtn'>Login / Register</button>
-                </div>
-            </nav>
+            
+
+    <Navbar/>
 
             <div className="landingMainContainer">
                 <div className="content">
@@ -24,7 +24,7 @@ export default function LandingPage() {
                     <Link to="/auth" className='getStartedBtn'>Get Started</Link>
                 </div>
                 <div className="imageContainer">
-                    <img src="/mobile.png" alt="Vision Talk Mobile" />
+                    <img src="https://www.vyopta.com/wp-content/uploads/2020/04/iStock-1213470229-1.jpg" alt="Vision Talk Mobile" />
                 </div>
             </div>
         </div>

@@ -2,10 +2,10 @@ import React, { useContext, useState } from 'react';
 import withAuth from '../utils/withAuth';
 import { useNavigate } from 'react-router-dom';
 import "./home.css";
-import { Button, IconButton, TextField } from '@mui/material';
-import RestoreIcon from '@mui/icons-material/Restore';
-import LogoutIcon from '@mui/icons-material/Logout';
+import { Button, TextField } from '@mui/material';
+
 import { AuthContext } from '../contexts/AuthContext';
+import Navbar from '../Components/Navbar';
 
 function HomeComponent() {
     const navigate = useNavigate();
@@ -20,27 +20,8 @@ function HomeComponent() {
 
     return (
         <div className="homePageContainer">
-            <nav className="homeNavBar">
-                <div className="navLogo">
-                    <h2>Vision <span>Talk</span></h2>
-                </div>
-                <div className="navActions">
-                    <IconButton title="History" onClick={() => navigate("/history")}>
-                        <RestoreIcon style={{ color: "#fff" }} />
-                    </IconButton>
-                    <Button
-                        startIcon={<LogoutIcon />}
-                        onClick={() => {
-                            localStorage.removeItem("token");
-                            navigate("/auth");
-                        }}
-                        variant="outlined"
-                        className="logoutBtn"
-                    >
-                        Logout
-                    </Button>
-                </div>
-            </nav>
+            
+            <Navbar/>
 
             <main className="homeMain">
                 <section className="leftPanel">

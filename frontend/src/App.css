@@ -11,63 +11,105 @@ body {
   color: #ffffff;
 }
 
-/* Landing Container */
 .landingPageContainer {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom right, #1a1a1a, #0f0f0f);
   padding: 0;
   width: 100%;
+  background: url('https://i.pinimg.com/736x/fa/e8/9f/fae89f8c52b679dfc7357618451c45c5.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-/* NavBar */
 .navBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;  /* Adjusted padding */
-  backdrop-filter: blur(10px);
-  background-color: rgba(30, 30, 30, 0.8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  width: 100%; /* Ensure full width */
+  padding: 1rem 2rem;
+  backdrop-filter: blur(16px);
+  background-color: rgba(18, 18, 18, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navHeader h2 {
   color: white;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .navHeader span {
-  color: #6a1b9a; /* Purple */
+  color: #7C4DFF;
 }
 
-.navlist {
+.navLinks {
   display: flex;
   gap: 1rem;
 }
 
-.navlist button {
+.navLinks button {
   background: none;
-  border: 1px solid #2196f3; /* Blue */
-  color: #2196f3; /* Blue */
+  border: none;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
   padding: 0.5rem 1rem;
   border-radius: 8px;
+  transition: all 0.2s ease;
   cursor: pointer;
-  transition: 0.3s ease;
-  font-weight: 500;
 }
 
-.navlist .loginBtn {
-  background-color: #2196f3; /* Blue */
-  color: #fff;
+.navLinks button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navProfile .loginBtn {
+  background: linear-gradient(135deg, #2196f3, #7C4DFF);
   border: none;
+  padding: 0.6rem 1rem;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.3s ease;
 }
 
-.navlist button:hover {
-  transform: scale(1.05);
-  opacity: 0.85;
+.navProfile .loginBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(124, 77, 255, 0.4);
 }
+
+.hamburgerMenu {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: block;
+  }
+
+  .navProfile .loginBtn {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
 
 /* Main Container */
 .landingMainContainer {
