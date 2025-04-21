@@ -12,9 +12,8 @@ export default function LandingPage() {
                     <h2>Vision <span>Talk</span></h2>
                 </div>
                 <div className='navlist'>
-                    <button onClick={() => router("/aljk23")}>Join as Guest</button>
-                    <button onClick={() => router("/auth")}>Register</button>
-                    <button onClick={() => router("/auth")} className='loginBtn'>Login</button>
+                    
+                    <button onClick={() => router("/auth")} className='loginBtn'>Login / Register</button>
                 </div>
             </nav>
 
